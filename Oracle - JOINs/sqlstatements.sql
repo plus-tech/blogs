@@ -208,14 +208,3 @@ SELECT /*+ ORDERED USE_NL(dpt) */
 FROM Employees emp JOIN Departments dpt
 ON emp.Department_Id = dpt.Department_Id
 ;
-
-
-----------------------------------------------------------------
--- 
-----------------------------------------------------------------
-
-
-
-
-
-CREATE INDEX employees_departments_id_idx ON Employees(Department_Id);
