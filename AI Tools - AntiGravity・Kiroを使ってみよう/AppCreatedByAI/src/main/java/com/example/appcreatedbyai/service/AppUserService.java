@@ -78,7 +78,7 @@ public class AppUserService {
      */
     @Transactional
     public void deleteUser(Long id) {
-        if (!appUserRepository.findById(id).isPresent()) {
+        if (appUserRepository.findById(id).isEmpty()) {
             throw new ResourceNotFoundException("ID [" + id + "] のユーザーが見つかりません");
         }
         appUserRepository.deleteById(id);
